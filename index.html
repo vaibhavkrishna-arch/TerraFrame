@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TerraFrame is a calm, responsive image discovery interface.">
+  <title>TerraFrame — A window into everything</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#" aria-label="TerraFrame home"><span class="brand-mark" aria-hidden="true">TF</span><span>TerraFrame<span class="period">.</span></span></a>
+    <p class="tagline">A window into everything.</p>
+  </header>
+  <main class="page-shell">
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">YOUR NEXT VISUAL DISCOVERY</p>
+      <h1 id="page-title">Give an idea<br><em>a new perspective.</em></h1>
+      <p class="intro-copy">Search a place, a feeling, or anything you’re curious about. Your next inspiration starts here.</p>
+      <form class="search-panel" id="searchForm">
+        <label for="searchInput">What would you like to explore?</label>
+        <div class="search-row">
+          <input type="search" id="searchInput" name="query" placeholder="Try “quiet forests” or “Tokyo at night”" autocomplete="off">
+          <button type="submit" id="searchButton">Search <span aria-hidden="true">↗</span></button>
+        </div>
+      </form>
+      <div class="quick-picks" aria-label="Suggested searches">
+        <span class="quick-picks-label">A little inspiration</span>
+        <button class="chip" type="button">Nature</button>
+        <button class="chip" type="button">Architecture</button>
+        <button class="chip" type="button">Ocean</button>
+        <button class="chip" type="button">Street life</button>
+      </div>
+    </section>
+    <section class="results-section" aria-labelledby="results-heading">
+      <div class="results-heading-row">
+        <div><p class="section-kicker">THE GALLERY</p><h2 id="results-heading">Explore the unknown</h2></div>
+        <p class="result-count" id="resultCount">Your collection awaits</p>
+      </div>
+      <div class="empty-state" id="emptyState">
+        <div class="empty-art" aria-hidden="true"><span class="sun"></span><span class="hill hill-back"></span><span class="hill hill-front"></span></div>
+        <h3>Every search opens a new view.</h3>
+        <p>Enter a topic above to start building your visual collection.</p>
+      </div>
+      <!-- Keep #results empty. Part 2 will render image cards here. -->
+      <div class="results-grid" id="results" aria-live="polite"></div>
+    </section>
+  </main>
+  <footer class="site-footer"><span>TerraFrame © 2026</span><span>Made for the curious.</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
